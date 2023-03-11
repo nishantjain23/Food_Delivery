@@ -1,0 +1,252 @@
+/* CSS RESET */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* logo and image */
+#logo {
+    margin: 10px 23px;
+}
+
+#logo img {
+    height: 70px;
+    margin: -1px -31px;
+}
+
+/* Navigation bar*/
+#navbar {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    /* height: 100%; */
+    top: 0px;
+    /* justify-content: center; */
+}
+
+/* list styling */
+/* Study this thing from his video (imp) */
+#navbar::before {
+    content: "";
+    background-color: rgb(8 59 59);
+    position: absolute;
+    height: 85px;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    /* Making top and left 0 is important */
+    z-index: -1;
+    opacity: 0.9;
+}
+
+#navbar ul {
+    display: flex;
+    font-family: 'Bree Serif', serif;
+}
+
+#navbar ul li {
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a {
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover {
+    color: burlywood;
+    background-color: white;
+}
+
+/* Home Section */
+#home {
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    height: 551px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    background: url("../bg.jpg") no-repeat center center/cover;
+    /* why are we writing no repeat center center/cover? */
+    height: 650px;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    /* Making top and left 0 is important */
+    z-index: -1;
+    opacity: 0.9;
+}
+
+#home h1 {
+    color: white;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+
+#home p {
+    color: #a4e4cd;
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Bree Serif', serif;
+}
+
+/* Services Section */
+#services {
+    margin: 36px;
+    display: flex;
+}
+
+#services .box {
+    border: 2px solid brown;
+    padding: 60px;
+    margin: 3px 50px;
+    border-radius: 23px;
+    background-color: #68b9aca6;
+}
+
+/* Animations */
+/* @keyframes nishant1{
+    from{
+
+    }
+    to{
+        
+    }
+} */
+
+#services .box img {
+    height: 160px;
+    margin: auto;
+    display: block;
+}
+
+/* Companies section */
+#companies-section {
+    /* !!!why here we cant put relative find out!!! */
+    /* position: relative; */
+    height: 300px;
+}
+
+#companies-section::before {
+    content: "";
+    position: absolute;
+    background-color: antiquewhite;
+    height: 270px;
+    width: 100%;
+    z-index: -1;
+}
+
+#companies {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#companies .companies-item {
+    padding: 6px;
+    /* Now after thst y is this not necessary */
+    /* z-index: -1; */
+}
+
+#companies .companies-item img {
+    height: 144px;
+    margin: auto;
+    display: block;
+}
+
+/* Contacts section */
+
+#contact {
+    /* Hee also the same thing ???*/
+    /* position: relative; */
+    height: 585px;
+}
+
+#contact::before {
+    content: "";
+    position: absolute;
+    height: 585px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url('../image/contact\ us.jpg') no-repeat center center/cover;
+}
+
+#contact-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-bottom: 34px;
+}
+
+/* We are doing this one by one instead of targeting form-group class at once because it can be used further in the navbar area or somewhere else */
+
+#contact-box form {
+    width: 40%;
+}
+
+#contact-box label {
+    font-size: 1.3rem;
+    font-family: 'Bree Serif', serif;
+}
+
+#contact-box input,
+#contact-box textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+}
+
+footer {
+    background: black;
+    color: white;
+    padding: 9px 20px;
+}
+
+/* Utility class (Always make classes like this bcoz u can reuse the code if u want to by just using the class name*/
+.h-primary {
+    font-size: 3.5rem;
+    padding: 12px;
+}
+
+.h-secondary {
+    font-size: 1.8rem;
+    padding: 12px;
+}
+
+.btn {
+    padding: 6px 9px;
+    /* 20px */
+    border: 2px solid white;
+    background-color: burlywood;
+    color: white;
+    margin: 15px;
+    /* 17px */
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: #01241ea6;
+    color: burlywood;
+    border: 2px solid burlywood;
+}
+
+.center {
+    text-align: center;
+}
